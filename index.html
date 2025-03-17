@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Productividad y Competitividad del Oriente</title>
+    <style>
+        /* Reset y estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #00529b;
+            color: white;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #003d73;
+        }
+
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            height: 60px;
+        }
+
+        .nav-menu {
+            display: flex;
+        }
+
+        .nav-menu li {
+            margin-left: 25px;
+            font-weight: 500;
+        }
+
+        .nav-menu li a {
+            color: #333;
+            transition: color 0.3s;
+        }
+
+        .nav-menu li a:hover {
+            color: #00529b;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 600px;
+            background-image: url('/placeholder.svg?height=600&width=1200');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            margin-top: 90px;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            max-width: 600px;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        /* Servicios */
+        .services {
+            padding: 80px 0;
+            background-color: #f9f9f9;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: #00529b;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            font-size: 18px;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-img {
+            height: 200px;
+            background-color: #ddd;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .service-content {
+            padding: 25px;
+        }
+
+        .service-content h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #00529b;
+        }
+
+        .service-content p {
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        /* Sobre Nosotros */
+        .about {
+            padding: 80px 0;
+        }
+
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-img {
+            flex: 1;
+            height: 400px;
+            background-color: #ddd;
+            border-radius: 8px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .about-content {
+            flex: 1;
+        }
+
+        .about-content h2 {
+            font-size: 36px;
+            color: #00529b;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        /* Proyectos */
+        .projects {
+            padding: 80px 0;
+            background-color: #f9f9f9;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-img {
+            height: 200px;
+            background-color: #ddd;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-content h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #00529b;
+        }
+
+        .project-content p {
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        /* Testimonios */
+        .testimonials {
+            padding: 80px 0;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #ddd;
+            margin-right: 15px;
+        }
+
+        .author-info h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .author-info p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Aliados */
+        .partners {
+            padding: 80px 0;
+            background-color: #f9f9f9;
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            align-items: center;
+        }
+
+        .partner-logo {
+            background-color: white;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 15px;
+        }
+
+        .partner-logo img {
+            max-height: 70px;
+            filter: grayscale(100%);
+            transition: filter 0.3s;
+        }
+
+        .partner-logo:hover img {
+            filter: grayscale(0%);
+        }
+
+        /* Contacto */
+        .contact {
+            padding: 80px 0;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+
+        .contact-info h3 {
+            font-size: 24px;
+            color: #00529b;
+            margin-bottom: 20px;
+        }
+
+        .contact-details {
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #00529b;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-right: 15px;
+        }
+
+        .contact-text h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .contact-text p {
+            color: #666;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: #00529b;
+        }
+
+        .footer-col p {
+            margin-bottom: 15px;
+            color: #aaa;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #00529b;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+        }
+
+        .social-icon:hover {
+            background-color: #00529b;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-container {
+                flex-direction: column;
+            }
+            
+            .about-img {
+                width: 100%;
+            }
+            
+            .hero-content h1 {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero {
+                height: 500px;
+            }
+            
+            .hero-content h1 {
+                font-size: 32px;
+            }
+            
+            .section-title h2 {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                height: 400px;
+            }
+            
+            .hero-content h1 {
+                font-size: 28px;
+            }
+            
+            .hero-content p {
+                font-size: 16px;
+            }
+            
+            .section-title h2 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo-container">
+                <img src="/placeholder.svg?height=60&width=180" alt="CPC Oriente Logo" class="logo">
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#aliados">Aliados</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                <div class="mobile-menu-btn">☰</div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Centro de Productividad y Competitividad del Oriente</h1>
+            <p>Impulsamos el desarrollo empresarial y la competitividad regional a través de servicios especializados, formación y proyectos de innovación.</p>
+            <a href="#contacto" class="btn">Conoce nuestros servicios</a>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros Servicios</h2>
+                <p>Ofrecemos soluciones integrales para mejorar la productividad y competitividad de las empresas de la región.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('/placeholder.svg?height=200&width=300');"></div>
+                    <div class="service-content">
+                        <h3>Consultoría Empresarial</h3>
+                        <p>Asesoramiento especializado para optimizar procesos, mejorar la productividad y aumentar la competitividad de su empresa.</p>
+                        <a href="#" class="btn">Más información</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('/placeholder.svg?height=200&width=300');"></div>
+                    <div class="service-content">
+                        <h3>Formación Especializada</h3>
+                        <p>Programas de capacitación y formación para el desarrollo de habilidades y competencias en su equipo de trabajo.</p>
+                        <a href="#" class="btn">Más información</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('/placeholder.svg?height=200&width=300');"></div>
+                    <div class="service-content">
+                        <h3>Innovación y Desarrollo</h3>
+                        <p>Apoyo en la implementación de proyectos de innovación y desarrollo tecnológico para impulsar su competitividad.</p>
+                        <a href="#" class="btn">Más información</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nosotros -->
+    <section id="nosotros" class="about">
+        <div class="container about-container">
+            <div class="about-img" style="background-image: url('/placeholder.svg?height=400&width=500');"></div>
+            <div class="about-content">
+                <h2>Sobre CPC Oriente</h2>
+                <p>Somos una organización dedicada a impulsar la productividad y competitividad de las empresas de la región oriental del país. Con más de 15 años de experiencia, hemos contribuido al desarrollo económico y social de nuestra región.</p>
+                <p>Nuestro equipo está conformado por profesionales altamente calificados en diferentes áreas del conocimiento, comprometidos con la excelencia y el desarrollo empresarial.</p>
+                <a href="#" class="btn">Conoce más</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" class="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>Proyectos Destacados</h2>
+                <p>Conoce algunos de nuestros proyectos más relevantes que han impactado positivamente en la región.</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img" style="background-image: url('/placeholder.svg?height=200&width=300');"></div>
+                    <div class="project-content">
+                        <h3>Fortalecimiento del Sector Agroindustrial</h3>
+                        <p>Proyecto de mejora de la competitividad de las empresas agroindustriales de la región a través de la implementación de tecnologías innovadoras.</p>
+                        <a href="#" class="btn">Ver proyecto</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img" style="background-image: url('/placeholder.svg?height=200&width=300');"></div>
+                    <div class="project-content">
+                        <h3>Desarrollo de Clúster Tecnológico</h3>
+                        <p>Iniciativa para la creación y fortalecimiento de un clúster tecnológico regional que impulse la innovación y el desarrollo empresarial.</p>
+                        <a href="#" class="btn">Ver proyecto</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img" style="background-image: url('/placeholder.svg?height=200&width=300');"></div>
+                    <div class="project-content">
+                        <h3>Programa de Internacionalización</h3>
+                        <p>Acompañamiento a empresas locales en su proceso de internacionalización para acceder a nuevos mercados y oportunidades de negocio.</p>
+                        <a href="#" class="btn">Ver proyecto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonios" class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Testimonios</h2>
+                <p>Lo que nuestros clientes dicen sobre nuestros servicios</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Gracias al apoyo del CPC Oriente, nuestra empresa logró optimizar sus procesos productivos y aumentar significativamente su competitividad en el mercado."</p>
+                    <div class="testimonial-author">
+                        <div class="author-img" style="background-image: url('/placeholder.svg?height=50&width=50');"></div>
+                        <div class="author-info">
+                            <h4>Carlos Rodríguez</h4>
+                            <p>Gerente General, Industrias XYZ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Los programas de formación especializada nos permitieron desarrollar nuevas habilidades en nuestro equipo, lo que se ha traducido en mejores resultados para nuestra empresa."</p>
+                    <div class="testimonial-author">
+                        <div class="author-img" style="background-image: url('/placeholder.svg?height=50&width=50');"></div>
+                        <div class="author-info">
+                            <h4>María González</h4>
+                            <p>Directora de RRHH, Empresa ABC</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"El proyecto de innovación desarrollado con el CPC Oriente nos permitió implementar nuevas tecnologías que han revolucionado nuestra forma de trabajar."</p>
+                    <div class="testimonial-author">
+                        <div class="author-img" style="background-image: url('/placeholder.svg?height=50&width=50');"></div>
+                        <div class="author-info">
+                            <h4>Juan Pérez</h4>
+                            <p>Director de Innovación, Grupo DEF</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aliados -->
+    <section id="aliados" class="partners">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros Aliados</h2>
+                <p>Trabajamos en colaboración con importantes instituciones y empresas para impulsar el desarrollo regional.</p>
+            </div>
+            <div class="partners-grid">
+                <div class="partner-logo">
+                    <img src="/placeholder.svg?height=70&width=120" alt="Logo Aliado 1">
+                </div>
+                <div class="partner-logo">
+                    <img src="/placeholder.svg?height=70&width=120" alt="Logo Aliado 2">
+                </div>
+                <div class="partner-logo">
+                    <img src="/placeholder.svg?height=70&width=120" alt="Logo Aliado 3">
+                </div>
+                <div class="partner-logo">
+                    <img src="/placeholder.svg?height=70&width=120" alt="Logo Aliado 4">
+                </div>
+                <div class="partner-logo">
+                    <img src="/placeholder.svg?height=70&width=120" alt="Logo Aliado 5">
+                </div>
+                <div class="partner-logo">
+                    <img src="/placeholder.svg?height=70&width=120" alt="Logo Aliado 6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contacto</h2>
+                <p>Estamos aquí para ayudarte. Contáctanos para más información sobre nuestros servicios.</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-text">
+                                <h4>Dirección</h4>
+                                <p>Av. Principal #123, Col. Centro, Ciudad</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-text">
+                                <h4>Teléfono</h4>
+                                <p>+57 123 456 7890</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>contacto@cpcoriente.org</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🕒</div>
+                            <div class="contact-text">
+                                <h4>Horario</h4>
+                                <p>Lunes a Viernes: 8:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="Nombre completo" required>
+                        <input type="email" placeholder="Correo electrónico" required>
+                        <input type="tel" placeholder="Teléfono">
+                        <textarea placeholder="Mensaje" required></textarea>
+                        <button type="submit" class="btn">Enviar mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>CPC Oriente</h3>
+                    <p>Centro de Productividad y Competitividad del Oriente, comprometidos con el desarrollo empresarial y la competitividad regional.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">FB</a>
+                        <a href="#" class="social-icon">IG</a>
+                        <a href="#" class="social-icon">TW</a>
+                        <a href="#" class="social-icon">LI</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Enlaces rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#proyectos">Proyectos</a></li>
+                        <li><a href="#aliados">Aliados</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Servicios</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Consultoría Empresarial</a></li>
+                        <li><a href="#">Formación Especializada</a></li>
+                        <li><a href="#">Innovación y Desarrollo</a></li>
+                        <li><a href="#">Internacionalización</a></li>
+                        <li><a href="#">Gestión de Proyectos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Boletín</h3>
+                    <p>Suscríbete a nuestro boletín para recibir noticias y actualizaciones.</p>
+                    <form>
+                        <input type="email" placeholder="Tu correo electrónico" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 4px; border: none;">
+                        <button type="submit" class="btn" style="width: 100%;">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Centro de Productividad y Competitividad del Oriente. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
