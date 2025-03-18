@@ -50,7 +50,7 @@
         <div class="container hero-content">
             <h1>Centro de Productividad y Competitividad del Oriente</h1>
             <p>Impulsamos el desarrollo empresarial y la competitividad regional a través de servicios especializados, formación y proyectos de innovación.</p>
-            <a href="#contacto" class="btn">Conoce nuestros servicios</a>
+            <a href="#contacto" id="btn-portada">Conoce nuestros servicios</a>
         </div>
     </section>
 
@@ -70,7 +70,7 @@
                         <div class="row">
                             <div class="col-6">
                                 <div class="service-card">
-                                    <div class="service-img" style="background-image: url('/placeholder.svg?height=200&width=300');"></div>
+                                    <div ref="#a" class="service-img" style="background-image: url('/img/gestion.webp?height=200&width=300');"></div>
                                     <div class="service-content">
                                         <h3>Gestión de proyectos</h3>
                                         <p>---.</p>
@@ -80,7 +80,7 @@
                             </div>
                             <div class="col-6">
                                 <div class="service-card">
-                                    <div class="service-img" style="background-image: url('/placeholder.svg?height=200&width=300');"></div>
+                                    <div class="service-img" style="background-image: url('/img/transformacion.webp?height=200&width=300');"></div>
                                     <div class="service-content">
                                         <h3>Transformación digital</h3>
                                         <p>----</p>
@@ -96,7 +96,7 @@
                         <div class="row">
                             <div class="col-6">
                                 <div class="service-card">
-                                    <div class="service-img" style="background-image: url('/placeholder.svg?height=200&width=300');"></div>
+                                    <div class="service-img" style="background-image: url('/img/desarrollo.webp?height=200&width=300');"></div>
                                     <div class="service-content">
                                         <h3>Desarrollo de capacidades</h3>
                                         <p>----</p>
@@ -106,9 +106,9 @@
                             </div>
                             <div class="col-6">
                                 <div class="service-card">
-                                    <div class="service-img" style="background-image: url('/placeholder.svg?height=200&width=300');"></div>
+                                    <div class="service-img" style="background-image: url('/img/innovacion.webp?height=200&width=300');"></div>
                                     <div class="service-content">
-                                        <h3>Innovación y productividad</h3>
+                                        <h3>Innovacion y productividad</h3>
                                         <p>----</p>
                                         <a href="#" class="btn">Más información</a>
                                     </div>
@@ -130,7 +130,34 @@
                 </button>
             </div>
         </div>
+        <div id="botones_acerca">
+            <a href="#servicios" class="btn">Conoce más</a>
+            <a href="#contacto" class="btn">Contáctanos</a>
+            <a href="#contacto" class="btn">Experiencias</a>
+
+        </div>
     </section>
+       
+
+<!-- Aliados -->
+<section id="aliados" class="partners">
+    <div class="carousel-wrapper-aliados">
+        <div class="carousel-aliados">
+            <!-- Primera serie de imágenes -->
+            <img src="image1.jpg" alt="Image 1" class="carousel-image-aliados">
+            <img src="image2.jpg" alt="Image 2" class="carousel-image-aliados">
+            <img src="image3.jpg" alt="Image 3" class="carousel-image-aliados">
+            <img src="image4.jpg" alt="Image 4" class="carousel-image-aliados">
+            
+            <!-- Segunda serie de imágenes (para crear el efecto de repetición sin interrupciones) -->
+            <img src="image1.jpg" alt="Image 1" class="carousel-image-aliados">
+            <img src="image2.jpg" alt="Image 2" class="carousel-image-aliados">
+            <img src="image3.jpg" alt="Image 3" class="carousel-image-aliados">
+            <img src="image4.jpg" alt="Image 4" class="carousel-image-aliados">
+        </div>
+    </div>
+    
+</section>
 
     <!-- Sobre Nosotros -->
     <section id="nosotros" class="about">
@@ -223,35 +250,7 @@
         </div>
     </section>
 
-    <!-- Aliados -->
-    <section id="aliados" class="partners">
-        <div class="container">
-            <div class="section-title">
-                <h2>Nuestros Aliados</h2>
-                <p>Trabajamos en colaboración con importantes instituciones y empresas para impulsar el desarrollo regional.</p>
-            </div>
-            <div class="partners-grid">
-                <div class="partner-logo">
-                    <img src="/placeholder.svg?height=70&width=120" alt="Logo Aliado 1">
-                </div>
-                <div class="partner-logo">
-                    <img src="/placeholder.svg?height=70&width=120" alt="Logo Aliado 2">
-                </div>
-                <div class="partner-logo">
-                    <img src="/placeholder.svg?height=70&width=120" alt="Logo Aliado 3">
-                </div>
-                <div class="partner-logo">
-                    <img src="/placeholder.svg?height=70&width=120" alt="Logo Aliado 4">
-                </div>
-                <div class="partner-logo">
-                    <img src="/placeholder.svg?height=70&width=120" alt="Logo Aliado 5">
-                </div>
-                <div class="partner-logo">
-                    <img src="/placeholder.svg?height=70&width=120" alt="Logo Aliado 6">
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- Contacto -->
     <section id="contacto" class="contact">

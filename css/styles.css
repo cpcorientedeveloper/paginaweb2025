@@ -36,12 +36,23 @@ img {
     display: inline-block;
     padding: 10px 20px;
     background-color: #00529b;
-    color: white;
+    color: red;
     border-radius: 4px;
     font-weight: 600;
     transition: background-color 0.3s;
 }
 
+#btn-portada{
+    font-size: 4vh;
+    color: #ffe640;
+    text-decoration: none;  /* Elimina el subrayado por defecto */
+
+
+}
+#btn-portada:hover {
+    color: #478edf;
+    
+}
 .btn:hover {
     background-color: #003d73;
 }
@@ -52,7 +63,7 @@ header {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
-    height: 15vh;
+    height: 10vh;
     top: 0;
     z-index: 1000;
 }
@@ -185,7 +196,7 @@ header {
 /* Hero Section */
 .hero {
     height: 600px;
-    background-image: url('/placeholder.svg?height=600&width=1200');
+    background-image: url('/img/portada.webp');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -224,6 +235,7 @@ header {
 }
 
 /* Servicios */
+
 .services {
     padding: 80px 0;
     background-color: #f9f9f9;
@@ -266,7 +278,7 @@ header {
 }
 
 .service-img {
-    height: 200px;
+    height: 300px;
     background-color: #ddd;
     background-size: cover;
     background-position: center;
@@ -286,6 +298,62 @@ header {
     margin-bottom: 20px;
     color: #666;
 }
+
+#botones_acerca{
+    margin-top: 4vh;
+display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    border-color: #000;
+    
+
+}
+#botones_acerca a{
+    background-color: rgb(27,178,255);
+    border-radius: 10px;
+    border-color: #000;
+    color: #fff;
+
+
+}
+#botones_acerca a:hover{
+    background-color: rgb(188, 197, 201);
+    border-radius: 10px;
+    border-color: #000;
+    color: #fff;
+
+
+}
+
+.carousel-wrapper-aliados {
+    width: 100%;
+    overflow: hidden; /* Oculta las imágenes fuera del área visible */
+    position: relative;
+}
+
+.carousel-aliados {
+    display: flex;
+    animation: scroll-carousel 20s linear infinite; /* Desplazamiento continuo de izquierda a derecha */
+}
+
+.carousel-image-aliados {
+    width: 100%;
+    max-width: 300px; /* Ajusta el tamaño de las imágenes */
+    height: auto;
+    object-fit: cover;
+    flex-shrink: 0; /* Asegura que las imágenes no se reduzcan de tamaño */
+}
+
+@keyframes scroll-carousel {
+    0% {
+        transform: translateX(0); /* Comienza desde la posición inicial */
+    }
+    100% {
+        transform: translateX(-100%); /* Se mueve completamente hacia la izquierda */
+    }
+}
+
 
 /* Sobre Nosotros */
 .about {
