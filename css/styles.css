@@ -1,10 +1,17 @@
    /* Reset y estilos generales */
+   :root {
+    --azul-oscuro: #2b2883;
+    --amarillo: #feca00;
+    --azulclaro:#008cd0;
+    --font-size: 16px;
+  }
    * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Poppins';
 }
+
 
 body {
     color: #333;
@@ -35,8 +42,8 @@ img {
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #00529b;
-    color: red;
+    background-color:var(--azul-oscuro);
+
     border-radius: 4px;
     font-weight: 600;
     transition: background-color 0.3s;
@@ -44,17 +51,17 @@ img {
 
 #btn-portada{
     font-size: 4vh;
-    color: #ffe640;
+    color: var(--amarillo);
     text-decoration: none;  /* Elimina el subrayado por defecto */
 
 
 }
 #btn-portada:hover {
-    color: #478edf;
+    color: var(--azulclaro);;
     
 }
 .btn:hover {
-    background-color: #003d73;
+    background-color: var(--azul-oscuro);;
 }
 
 /* Header */
@@ -103,7 +110,7 @@ header {
 
 /* Efecto hover: añadir una línea debajo */
 .nav-menu li a:hover {
-    color: rgb(27,178,255);
+    color: var(--azulclaro);;
 }
 
 /* Línea debajo del enlace al pasar el mouse */
@@ -126,7 +133,7 @@ header {
     left: 0;
     width: 100%; /* La línea ocupará todo el ancho del enlace */
     height: 2px; /* Grosor de la línea */
-    background-color: rgb(27,178,255); /* Color de la línea */
+    background-color:var(--azulclaro);; /* Color de la línea */
     transform: scaleX(0); /* Inicia la línea invisible */
     transform-origin: bottom right; /* Hace que la línea se expanda desde la derecha */
     transition: transform 0.3s ease-out; /* Transición suave */
@@ -142,7 +149,7 @@ header {
     position: absolute;
     top: 100%;  /* Posiciona el submenú justo debajo del item principal */
     left: 0;
-    background-color: rgb(6,11,49);
+    background-color: var(--azul-oscuro);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     min-width: 300px;
@@ -179,7 +186,7 @@ header {
 /* Efecto hover en los enlaces del submenú */
 .nav-menu li ul li a:hover {
     color: #ffffff;
-    background-color: rgb(14, 48, 126);;  /* Efecto hover en los enlaces del submenú */
+    background-color: var(--azul-oscuro);  /* Efecto hover en los enlaces del submenú */
 }
 
 /* Asegurar que los enlaces tienen un poco de espacio */
@@ -201,7 +208,8 @@ header {
     background-position: center;
     display: flex;
     align-items: center;
-    margin-top: 90px;
+    margin-top: 10vh;
+    height: 90vh;
     position: relative;
 }
 
@@ -220,7 +228,7 @@ header {
     z-index: 1;
     color: white;
     max-width: 600px;
-    padding: 0 20px;
+    padding: 0 20x;
 }
 
 .hero-content h1 {
@@ -237,7 +245,7 @@ header {
 /* Servicios */
 
 .services {
-    padding: 80px 0;
+    padding: 10vh 0;
     background-color: #f9f9f9;
 }
 
@@ -248,7 +256,7 @@ header {
 
 .section-title h2 {
     font-size: 36px;
-    color: #00529b;
+    color: #000;
     margin-bottom: 15px;
 }
 
@@ -265,20 +273,14 @@ header {
     gap: 30px;
 }
 
-.service-card {
-    background-color: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
+
 
 .service-card:hover {
     transform: translateY(-10px);
 }
 
 .service-img {
-    height: 300px;
+    height: 30vh;
     background-color: #ddd;
     background-size: cover;
     background-position: center;
@@ -286,17 +288,56 @@ header {
 
 .service-content {
     padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .service-content h3 {
     font-size: 22px;
     margin-bottom: 15px;
-    color: #00529b;
+    color: var(--azul-oscuro);;
 }
 
 .service-content p {
     margin-bottom: 20px;
     color: #666;
+}
+.service-card-link {
+    display: block;
+    text-decoration: none; /* Eliminar subrayado del enlace */
+    color: inherit; /* Mantener el color de texto original */
+}
+.service-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--amarillo); 
+width: 10px;
+}
+
+.btninfo{
+    background-color: var(--azulclaro);
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+.btninfo:hover {
+    background-color: var(--amarillo); /* Fondo amarillo */
+    color: #fff;  /* Mantener el color del texto blanco */
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 10px 20px;  /* Mantener el padding consistente */
 }
 
 #botones_acerca{
@@ -305,20 +346,18 @@ display: flex;
     justify-content: center;
     align-items: center;
     justify-content: space-evenly;
-    border-color: #000;
     
 
 }
 #botones_acerca a{
-    background-color: rgb(27,178,255);
+    background-color: var(--azulclaro);;
     border-radius: 10px;
-    border-color: #000;
     color: #fff;
 
 
 }
 #botones_acerca a:hover{
-    background-color: rgb(188, 197, 201);
+    background-color: var(--amarillo);
     border-radius: 10px;
     border-color: #000;
     color: #fff;
@@ -330,31 +369,57 @@ display: flex;
     width: 100%;
     overflow: hidden; /* Oculta las imágenes fuera del área visible */
     position: relative;
+    mask-image: linear-gradient(to left, transparent 1%, black 10%); /* Máscara para los bordes */
+
 }
 
 .carousel-aliados {
     display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
     animation: scroll-carousel 20s linear infinite; /* Desplazamiento continuo de izquierda a derecha */
 }
 
 .carousel-image-aliados {
+    margin-left: 3vw;
     width: 100%;
-    max-width: 300px; /* Ajusta el tamaño de las imágenes */
-    height: auto;
+    max-width: 150px; /* Ajusta el tamaño de las imágenes */
+    height: 100%;
     object-fit: cover;
-    flex-shrink: 0; /* Asegura que las imágenes no se reduzcan de tamaño */
 }
+
 
 @keyframes scroll-carousel {
     0% {
         transform: translateX(0); /* Comienza desde la posición inicial */
     }
     100% {
-        transform: translateX(-100%); /* Se mueve completamente hacia la izquierda */
+        transform: translateX(-110%); /* Se mueve completamente hacia la izquierda */
     }
 }
 
+.carousel-wrapper-aliados-1 {
+    width: 100%;
+    overflow: hidden; /* Oculta las imágenes fuera del área visible */
+    position: relative;
+    mask-image: linear-gradient(to right, transparent 1%, black 10%); /* Máscara para los bordes */
 
+}
+
+.imagenesaliados{
+    display: flex;
+    flex-direction: row;
+
+}
+.carousel-text{
+    width: 50vw;
+    color: gray;
+    text-decoration: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /* Sobre Nosotros */
 .about {
     padding: 80px 0;
@@ -381,7 +446,7 @@ display: flex;
 
 .about-content h2 {
     font-size: 36px;
-    color: #00529b;
+    color: var(--azul-oscuro);;
     margin-bottom: 20px;
 }
 
@@ -423,7 +488,7 @@ display: flex;
 .project-content h3 {
     font-size: 22px;
     margin-bottom: 15px;
-    color: #00529b;
+    color: var(--azul-oscuro);
 }
 
 .project-content p {
@@ -480,8 +545,10 @@ display: flex;
 
 /* Aliados */
 .partners {
-    padding: 80px 0;
     background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    
 }
 
 .partners-grid {
@@ -525,7 +592,7 @@ display: flex;
 
 .contact-info h3 {
     font-size: 24px;
-    color: #00529b;
+    color: var(--azul-oscuro);
     margin-bottom: 20px;
 }
 
@@ -541,7 +608,7 @@ display: flex;
 .contact-icon {
     width: 40px;
     height: 40px;
-    background-color: #00529b;
+    background-color: var(--azul-oscuro);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -602,7 +669,7 @@ footer {
     bottom: 0;
     width: 50px;
     height: 2px;
-    background-color: #00529b;
+    background-color: var(--azul-oscuro);
 }
 
 .footer-col p {
@@ -620,7 +687,7 @@ footer {
 }
 
 .footer-links a:hover {
-    color: #00529b;
+    color: var(--azul-oscuro);
 }
 
 .social-links {
@@ -640,7 +707,7 @@ footer {
 }
 
 .social-icon:hover {
-    background-color: #00529b;
+    background-color: var(--azul-oscuro);
 }
 
 .copyright {
@@ -705,3 +772,4 @@ footer {
         font-size: 26px;
     }
 }
+

@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro de Productividad y Competitividad del Oriente</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 </head>
+
 <body>
     <!-- Header -->
     <header>
@@ -49,7 +53,8 @@
     <section class="hero">
         <div class="container hero-content">
             <h1>Centro de Productividad y Competitividad del Oriente</h1>
-            <p>Impulsamos el desarrollo empresarial y la competitividad regional a través de servicios especializados, formación y proyectos de innovación.</p>
+            <p>Impulsamos el desarrollo empresarial y la competitividad regional a través de servicios especializados,
+                formación y proyectos de innovación.</p>
             <a href="#contacto" id="btn-portada">Conoce nuestros servicios</a>
         </div>
     </section>
@@ -57,74 +62,87 @@
     <section id="servicios" class="services">
         <div class="container">
             <div class="section-title">
-                <h2>Nuestros Servicios</h2>
-                <p>Ofrecemos soluciones integrales para mejorar la productividad y competitividad de las empresas de la región.</p>
+                <h2>Nuestros <span style="color: #008cd0;">Servicios</span> </h2>
+                <p>Ofrecemos soluciones integrales para mejorar la productividad y competitividad de las empresas de la
+                    región.</p>
             </div>
-    
+
             <!-- Carrusel -->
             <div id="serviciosCarrusel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
                 <div class="carousel-inner">
-                    
+
                     <!-- Fila 1: Dos servicios a la vez -->
                     <div class="carousel-item active">
                         <div class="row">
                             <div class="col-6">
-                                <div class="service-card">
-                                    <div ref="#a" class="service-img" style="background-image: url('/img/gestion.webp?height=200&width=300');"></div>
-                                    <div class="service-content">
-                                        <h3>Gestión de proyectos</h3>
-                                        <p>---.</p>
-                                        <a href="#" class="btn">Más información</a>
+                                <!-- Envolviendo todo el contenido con un enlace -->
+                                <a href="#" class="service-card-link">
+                                    <div class="service-card">
+                                        <div class="service-img" style="background-image: url('/img/gestion.webp?height=200&width=300');"></div>
+                                        <div class="service-content">
+                                            <h3>Gestión de proyectos</h3>
+                                            <p>---.</p>
+                                            <span class="btninfo">Más información</span>
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                             <div class="col-6">
-                                <div class="service-card">
-                                    <div class="service-img" style="background-image: url('/img/transformacion.webp?height=200&width=300');"></div>
-                                    <div class="service-content">
-                                        <h3>Transformación digital</h3>
-                                        <p>----</p>
-                                        <a href="#" class="btn">Más información</a>
+                                <!-- Envolviendo todo el contenido con un enlace -->
+                                <a href="#" class="service-card-link">
+                                    <div class="service-card">
+                                        <div class="service-img" style="background-image: url('/img/transformacion.webp?height=200&width=300');"></div>
+                                        <div class="service-content">
+                                            <h3>Transformación digital</h3>
+                                            <p>----</p>
+                                            <span class="btninfo">Más información</span>
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
-    
+
                     <!-- Fila 2: Dos servicios a la vez -->
                     <div class="carousel-item">
                         <div class="row">
                             <div class="col-6">
                                 <div class="service-card">
-                                    <div class="service-img" style="background-image: url('/img/desarrollo.webp?height=200&width=300');"></div>
+                                    <div class="service-img"
+                                        style="background-image: url('/img/desarrollo.webp?height=200&width=300');">
+                                    </div>
                                     <div class="service-content">
                                         <h3>Desarrollo de capacidades</h3>
                                         <p>----</p>
-                                        <a href="#" class="btn">Más información</a>
+                                        <a href="#" class="btninfo">Más información</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="service-card">
-                                    <div class="service-img" style="background-image: url('/img/innovacion.webp?height=200&width=300');"></div>
+                                    <div class="service-img"
+                                        style="background-image: url('/img/innovacion.webp?height=200&width=300');">
+                                    </div>
                                     <div class="service-content">
                                         <h3>Innovacion y productividad</h3>
                                         <p>----</p>
-                                        <a href="#" class="btn">Más información</a>
+                                        <a href="#" class="btninfo">Más información</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-    
+
                 </div>
-    
+
                 <!-- Controles del carrusel (opcional) -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#serviciosCarrusel" data-bs-slide="prev">
+                <button style="justify-content: flex-start;width: 3vw;" class="carousel-control-prev" type="button" data-bs-target="#serviciosCarrusel"
+                    data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Anterior</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#serviciosCarrusel" data-bs-slide="next">
+                <button style="justify-content: flex-end;width: 3vw;" class="carousel-control-next" type="button" data-bs-target="#serviciosCarrusel"
+                    data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Siguiente</span>
                 </button>
@@ -137,63 +155,121 @@
 
         </div>
     </section>
-       
 
-<!-- Aliados -->
 
-<section id="aliados" class="partners">
-    <div class="carousel-wrapper-aliados">
-        <div class="section-title">
-            <h2>Nuestros clientes</h2>
-            <p>Trabajamos en colaboración con importantes instituciones y empresas para impulsar el desarrollo regional.</p>
+    <!-- Aliados -->
+   
+      
+  
+    <section id="aliados" class="partners">
+        <div class="carousel-wrapper-aliados">
+         
+                <div class="carousel-aliados">
+                    <!-- Primera serie de imágenes -->
+                    <img src="img/convenios/10x.png " alt="Image 1" class="carousel-image-aliados">
+                    <img src="img/convenios/adel.png" alt="Image 2" class="carousel-image-aliados">
+                    <img src="img/convenios/camara_bucaramanga.png" alt="Image 3" class="carousel-image-aliados">
+                    <img src="img/convenios/cenisoft.png" alt="Image 4" class="carousel-image-aliados">
+
+                    <!-- Segunda serie de imágenes (para crear el efecto de repetición sin interrupciones) -->
+                    <img src="img/convenios/cens.svg" alt="Image 1" class="carousel-image-aliados">
+                    <img src="img/convenios/ciaf.png" alt="Image 2" class="carousel-image-aliados">
+                    <img src="img/convenios/confecamaras.png" alt="Image 3" class="carousel-image-aliados">
+                    <img src="img/convenios/ecodiecel.png" alt="Image 4" class="carousel-image-aliados">
+
+                    <img src="img/convenios/10x.png " alt="Image 1" class="carousel-image-aliados">
+                    <img src="img/convenios/adel.png" alt="Image 2" class="carousel-image-aliados">
+                    <img src="img/convenios/camara_bucaramanga.png" alt="Image 3" class="carousel-image-aliados">
+                    <img src="img/convenios/cenisoft.png" alt="Image 4" class="carousel-image-aliados">
+                    <img src="img/convenios/cens.svg" alt="Image 1" class="carousel-image-aliados">
+                    <img src="img/convenios/ciaf.png" alt="Image 2" class="carousel-image-aliados">
+                    <img src="img/convenios/confecamaras.png" alt="Image 3" class="carousel-image-aliados">
+                    <img src="img/convenios/ecodiecel.png" alt="Image 4" class="carousel-image-aliados">
+                </div>
+               
+            </div>
+            <div class="carousel-text">
+               <h2>Nuestros Clientes</h2> 
+            </div>
+        </section>
+           
         </div>
-        <div class="carousel-aliados">
-            <!-- Primera serie de imágenes -->
-            <img src="image1.jpg" alt="Image 1" class="carousel-image-aliados">
-            <img src="image2.jpg" alt="Image 2" class="carousel-image-aliados">
-            <img src="image3.jpg" alt="Image 3" class="carousel-image-aliados">
-            <img src="image4.jpg" alt="Image 4" class="carousel-image-aliados">
-            
-            <!-- Segunda serie de imágenes (para crear el efecto de repetición sin interrupciones) -->
-            <img src="image1.jpg" alt="Image 1" class="carousel-image-aliados">
-            <img src="image2.jpg" alt="Image 2" class="carousel-image-aliados">
-            <img src="image3.jpg" alt="Image 3" class="carousel-image-aliados">
-            <img src="image4.jpg" alt="Image 4" class="carousel-image-aliados">
-        </div>
-    </div>
+        <section id="aliados" class="partners">
+            <div class="carousel-text">
+                <h2>Nuestros Convenios
+                </h2> 
+             </div>
+            <div class="carousel-wrapper-aliados-1">
+             
+                    <div class="carousel-aliados">
+                        <!-- Primera serie de imágenes -->
+                        <img src="img/convenios/10x.png " alt="Image 1" class="carousel-image-aliados">
+                        <img src="img/convenios/adel.png" alt="Image 2" class="carousel-image-aliados">
+                        <img src="img/convenios/camara_bucaramanga.png" alt="Image 3" class="carousel-image-aliados">
+                        <img src="img/convenios/cenisoft.png" alt="Image 4" class="carousel-image-aliados">
     
-</section>
-<section id="aliados" class="partners">
-    <div class="carousel-wrapper-aliados">
-        <div class="section-title">
-            <h2>Nuestros Convenios</h2>
-            <p>Trabajamos en colaboración con importantes instituciones y empresas para impulsar el desarrollo regional.</p>
-        </div>
-        <div class="carousel-aliados">
-            <!-- Primera serie de imágenes -->
-            <img src="image1.jpg" alt="Image 1" class="carousel-image-aliados">
-            <img src="image2.jpg" alt="Image 2" class="carousel-image-aliados">
-            <img src="image3.jpg" alt="Image 3" class="carousel-image-aliados">
-            <img src="image4.jpg" alt="Image 4" class="carousel-image-aliados">
-            
-            <!-- Segunda serie de imágenes (para crear el efecto de repetición sin interrupciones) -->
-            <img src="image1.jpg" alt="Image 1" class="carousel-image-aliados">
-            <img src="image2.jpg" alt="Image 2" class="carousel-image-aliados">
-            <img src="image3.jpg" alt="Image 3" class="carousel-image-aliados">
-            <img src="image4.jpg" alt="Image 4" class="carousel-image-aliados">
-        </div>
-    </div>
+                        <!-- Segunda serie de imágenes (para crear el efecto de repetición sin interrupciones) -->
+                        <img src="img/convenios/cens.svg" alt="Image 1" class="carousel-image-aliados">
+                        <img src="img/convenios/ciaf.png" alt="Image 2" class="carousel-image-aliados">
+                        <img src="img/convenios/confecamaras.png" alt="Image 3" class="carousel-image-aliados">
+                        <img src="img/convenios/ecodiecel.png" alt="Image 4" class="carousel-image-aliados">
     
-</section>
+                        <img src="img/convenios/10x.png " alt="Image 1" class="carousel-image-aliados">
+                        <img src="img/convenios/adel.png" alt="Image 2" class="carousel-image-aliados">
+                        <img src="img/convenios/camara_bucaramanga.png" alt="Image 3" class="carousel-image-aliados">
+                        <img src="img/convenios/cenisoft.png" alt="Image 4" class="carousel-image-aliados">
+                        <img src="img/convenios/cens.svg" alt="Image 1" class="carousel-image-aliados">
+                        <img src="img/convenios/ciaf.png" alt="Image 2" class="carousel-image-aliados">
+                        <img src="img/convenios/confecamaras.png" alt="Image 3" class="carousel-image-aliados">
+                        <img src="img/convenios/ecodiecel.png" alt="Image 4" class="carousel-image-aliados">
+                    </div>
+                   
+                </div>
+               
+            </section>
+               
+            </div>
 
+ <div id="experiencia">  
+            <h1>Algunos de los <span style="color: #008cd0;">hechos reales</span> de nuestra empresa</h1>
+            <div class="container">
+                <div class="box">
+                    <h3>Acompañamientos en formulación</h3>
+                    <div class="number" data-target="1800">0</div>
+                </div>
+                <div class="box">
+                    <h3>Fortalecimientos I+D+I</h3>
+                    <div class="number" data-target="686">0</div>
+                </div>
+                <div class="box">
+                    <h3>Transferencias de conocimiento</h3>
+                    <div class="number" data-target="29">0</div>
+                </div>
+                <div class="box">
+                    <h3>Evaluación de proyectos de I+D+I</h3>
+                    <div class="number" data-target="2500">0</div>
+                </div>
+                <div class="box">
+                    <h3>Desarrollos de Software</h3>
+                    <div class="number" data-target="40">0</div>
+                </div>
+                <div class="box">
+                    <h3>Acompañamiento en productividad e innovación</h3>
+                    <div class="number" data-target="280">0</div>
+                </div>
+            </div>
+        </div>
     <!-- Sobre Nosotros -->
     <section id="nosotros" class="about">
         <div class="container about-container">
             <div class="about-img" style="background-image: url('/placeholder.svg?height=400&width=500');"></div>
             <div class="about-content">
                 <h2>Sobre CPC Oriente</h2>
-                <p>Somos una organización dedicada a impulsar la productividad y competitividad de las empresas de la región oriental del país. Con más de 15 años de experiencia, hemos contribuido al desarrollo económico y social de nuestra región.</p>
-                <p>Nuestro equipo está conformado por profesionales altamente calificados en diferentes áreas del conocimiento, comprometidos con la excelencia y el desarrollo empresarial.</p>
+                <p>Somos una organización dedicada a impulsar la productividad y competitividad de las empresas de la
+                    región oriental del país. Con más de 15 años de experiencia, hemos contribuido al desarrollo
+                    económico y social de nuestra región.</p>
+                <p>Nuestro equipo está conformado por profesionales altamente calificados en diferentes áreas del
+                    conocimiento, comprometidos con la excelencia y el desarrollo empresarial.</p>
                 <a href="#" class="btn">Conoce más</a>
             </div>
         </div>
@@ -208,26 +284,32 @@
             </div>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-img" style="background-image: url('/placeholder.svg?height=200&width=300');"></div>
+                    <div class="project-img" style="background-image: url('/placeholder.svg?height=200&width=300');">
+                    </div>
                     <div class="project-content">
                         <h3>Fortalecimiento del Sector Agroindustrial</h3>
-                        <p>Proyecto de mejora de la competitividad de las empresas agroindustriales de la región a través de la implementación de tecnologías innovadoras.</p>
+                        <p>Proyecto de mejora de la competitividad de las empresas agroindustriales de la región a
+                            través de la implementación de tecnologías innovadoras.</p>
                         <a href="#" class="btn">Ver proyecto</a>
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-img" style="background-image: url('/placeholder.svg?height=200&width=300');"></div>
+                    <div class="project-img" style="background-image: url('/placeholder.svg?height=200&width=300');">
+                    </div>
                     <div class="project-content">
                         <h3>Desarrollo de Clúster Tecnológico</h3>
-                        <p>Iniciativa para la creación y fortalecimiento de un clúster tecnológico regional que impulse la innovación y el desarrollo empresarial.</p>
+                        <p>Iniciativa para la creación y fortalecimiento de un clúster tecnológico regional que impulse
+                            la innovación y el desarrollo empresarial.</p>
                         <a href="#" class="btn">Ver proyecto</a>
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-img" style="background-image: url('/placeholder.svg?height=200&width=300');"></div>
+                    <div class="project-img" style="background-image: url('/placeholder.svg?height=200&width=300');">
+                    </div>
                     <div class="project-content">
                         <h3>Programa de Internacionalización</h3>
-                        <p>Acompañamiento a empresas locales en su proceso de internacionalización para acceder a nuevos mercados y oportunidades de negocio.</p>
+                        <p>Acompañamiento a empresas locales en su proceso de internacionalización para acceder a nuevos
+                            mercados y oportunidades de negocio.</p>
                         <a href="#" class="btn">Ver proyecto</a>
                     </div>
                 </div>
@@ -244,9 +326,11 @@
             </div>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"Gracias al apoyo del CPC Oriente, nuestra empresa logró optimizar sus procesos productivos y aumentar significativamente su competitividad en el mercado."</p>
+                    <p class="testimonial-text">"Gracias al apoyo del CPC Oriente, nuestra empresa logró optimizar sus
+                        procesos productivos y aumentar significativamente su competitividad en el mercado."</p>
                     <div class="testimonial-author">
-                        <div class="author-img" style="background-image: url('/placeholder.svg?height=50&width=50');"></div>
+                        <div class="author-img" style="background-image: url('/placeholder.svg?height=50&width=50');">
+                        </div>
                         <div class="author-info">
                             <h4>Carlos Rodríguez</h4>
                             <p>Gerente General, Industrias XYZ</p>
@@ -254,9 +338,12 @@
                     </div>
                 </div>
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"Los programas de formación especializada nos permitieron desarrollar nuevas habilidades en nuestro equipo, lo que se ha traducido en mejores resultados para nuestra empresa."</p>
+                    <p class="testimonial-text">"Los programas de formación especializada nos permitieron desarrollar
+                        nuevas habilidades en nuestro equipo, lo que se ha traducido en mejores resultados para nuestra
+                        empresa."</p>
                     <div class="testimonial-author">
-                        <div class="author-img" style="background-image: url('/placeholder.svg?height=50&width=50');"></div>
+                        <div class="author-img" style="background-image: url('/placeholder.svg?height=50&width=50');">
+                        </div>
                         <div class="author-info">
                             <h4>María González</h4>
                             <p>Directora de RRHH, Empresa ABC</p>
@@ -264,9 +351,11 @@
                     </div>
                 </div>
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"El proyecto de innovación desarrollado con el CPC Oriente nos permitió implementar nuevas tecnologías que han revolucionado nuestra forma de trabajar."</p>
+                    <p class="testimonial-text">"El proyecto de innovación desarrollado con el CPC Oriente nos permitió
+                        implementar nuevas tecnologías que han revolucionado nuestra forma de trabajar."</p>
                     <div class="testimonial-author">
-                        <div class="author-img" style="background-image: url('/placeholder.svg?height=50&width=50');"></div>
+                        <div class="author-img" style="background-image: url('/placeholder.svg?height=50&width=50');">
+                        </div>
                         <div class="author-info">
                             <h4>Juan Pérez</h4>
                             <p>Director de Innovación, Grupo DEF</p>
@@ -277,7 +366,7 @@
         </div>
     </section>
 
-    
+
 
     <!-- Contacto -->
     <section id="contacto" class="contact">
@@ -339,7 +428,8 @@
             <div class="footer-container">
                 <div class="footer-col">
                     <h3>CPC Oriente</h3>
-                    <p>Centro de Productividad y Competitividad del Oriente, comprometidos con el desarrollo empresarial y la competitividad regional.</p>
+                    <p>Centro de Productividad y Competitividad del Oriente, comprometidos con el desarrollo empresarial
+                        y la competitividad regional.</p>
                     <div class="social-links">
                         <a href="#" class="social-icon">FB</a>
                         <a href="#" class="social-icon">IG</a>
@@ -372,7 +462,8 @@
                     <h3>Boletín</h3>
                     <p>Suscríbete a nuestro boletín para recibir noticias y actualizaciones.</p>
                     <form>
-                        <input type="email" placeholder="Tu correo electrónico" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 4px; border: none;">
+                        <input type="email" placeholder="Tu correo electrónico"
+                            style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 4px; border: none;">
                         <button type="submit" class="btn" style="width: 100%;">Suscribirse</button>
                     </form>
                 </div>
@@ -382,5 +473,7 @@
             </div>
         </div>
     </footer>
+    
 </body>
+
 </html>
