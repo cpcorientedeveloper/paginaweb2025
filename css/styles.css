@@ -651,7 +651,7 @@ display: flex;
 .contact-icon {
     width: 40px;
     height: 40px;
-    background-color: var(--azul-oscuro);
+    background-color: var(--azulclaro);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -666,7 +666,8 @@ display: flex;
 }
 
 .contact-text p {
-    color: #666;
+    color: #ffffff;
+    margin-bottom: 0;
 }
 
 .contact-form input,
@@ -689,6 +690,7 @@ footer {
     background-color: #222;
     color: white;
     padding: 60px 0 20px;
+    
 }
 
 .footer-container {
@@ -738,7 +740,10 @@ footer {
 
 .social-links {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 15px;
+    justify-content: center
 }
 
 .social-icon {
@@ -891,4 +896,46 @@ max-width: 89vw;
     }
     
 
+}
+
+#informacion-footer {
+    margin-left: 15vw;
+    margin-right: 15vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+}
+
+#logo-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#logo-footer img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    max-height: 100px; /* Ajusta la altura máxima del logo según necesites */
+}
+
+.datosf {
+    width: 100%; /* Aseguramos que cada columna ocupe el mismo tamaño */
+    text-align: left; /* Centrado del contenido en cada columna */
+   
+}
+
+.contenidodatos{
+    display: flex;
+    margin-bottom: 1vh;
+    
+}
+
+#contenidodatosdireccion{
+    display: flex;
+    width: 20vw;
 }
