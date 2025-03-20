@@ -34,7 +34,7 @@ img {
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 100vw;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -42,7 +42,8 @@ img {
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color:var(--azul-oscuro);
+    background-color:var(--azulclaro);
+    color: #fff;
 
     border-radius: 4px;
     font-weight: 600;
@@ -50,7 +51,7 @@ img {
 }
 
 #btn-portada{
-    font-size: 4vh;
+    font-size: 4vw;
     color: var(--amarillo);
     text-decoration: none;  /* Elimina el subrayado por defecto */
 
@@ -70,14 +71,14 @@ header {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
-    height: 10vh;
+    height: 12vh;
     top: 0;
     z-index: 1000;
 }
 
 .header-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 15px 0;
 }
@@ -200,17 +201,56 @@ header {
     cursor: pointer;
 }
 
+/* Contenedor de los iconos sociales */
+.social-icons {
+    position: fixed; /* Fijar la posición en la pantalla */
+    top: 50%; /* Centrado verticalmente */
+    right: 0; /* Alineado al borde derecho */
+    margin-right: 5vh;
+    transform: translateY(-50%); /* Centrado perfecto en el eje Y */
+    z-index: 9999; /* Asegura que los iconos estén encima de otros elementos */
+    display: none; /* Los iconos no se muestran por defecto */
+}
+
+/* Estilos para cada ícono */
+.social-icons a {
+    display: flex; /* Usamos flexbox para centrar el contenido */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    margin-bottom: 10px;
+    text-decoration: none;  /* Elimina el subrayado por defecto */
+
+    width: 50px;  /* Tamaño fijo para el contenedor del ícono */
+    height: 50px; /* Tamaño fijo para el contenedor del ícono */
+    background-color: var(--azulclaro); /* Fondo para los íconos */
+    border-radius: 50%; /* Hacer el contenedor circular */
+    color: white;
+    font-size: 1.5vw; /* Tamaño del ícono, se ajusta al tamaño de la ventana */
+    transition: background-color 0.3s ease; /* Efecto de hover */
+}
+
+.social-icons a:hover {
+    background-color: var(--amarillo); /* Cambio de color en hover */
+}
+
+/* Mostrar los iconos solo en pantallas grandes (desktop) */
+@media (min-width: 1024px) {
+    .social-icons {
+        display: block; /* Muestra los iconos solo en pantallas grandes */
+    }
+}
 /* Hero Section */
 .hero {
     height: 600px;
-    background-image: url('/img/portada.webp');
+    background-image: url('/assets/img/portada.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
-    margin-top: 10vh;
-    height: 90vh;
+    margin-top: 12vh;
+    height: 88vh;
     position: relative;
+    padding-bottom: 12vh;
 }
 
 .hero::before {
@@ -220,6 +260,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
+    
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -227,7 +268,7 @@ header {
     position: relative;
     z-index: 1;
     color: white;
-    max-width: 600px;
+    max-width: 50vw;
     padding: 0 20x;
 }
 
@@ -239,15 +280,16 @@ header {
 
 .hero-content p {
     font-size: 18px;
-    margin-bottom: 30px;
+    margin-bottom: px;
 }
 
 /* Servicios */
 
 .services {
-    padding: 10vh 0;
+    padding: 12vh 0;
     background-color: #f9f9f9;
 }
+
 
 .section-title {
     text-align: center;
@@ -343,6 +385,7 @@ width: 10px;
 #botones_acerca{
     margin-top: 4vh;
 display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     justify-content: space-evenly;
@@ -350,7 +393,8 @@ display: flex;
 
 }
 #botones_acerca a{
-    background-color: var(--azulclaro);;
+    background-color: var(--azulclaro);
+    margin-top: 1vh;
     border-radius: 10px;
     color: #fff;
 
@@ -359,7 +403,6 @@ display: flex;
 #botones_acerca a:hover{
     background-color: var(--amarillo);
     border-radius: 10px;
-    border-color: #000;
     color: #fff;
 
 
@@ -679,15 +722,18 @@ footer {
 
 .footer-links li {
     margin-bottom: 10px;
+    
 }
 
 .footer-links a {
     color: #aaa;
     transition: color 0.3s;
+    text-decoration: none;
+
 }
 
 .footer-links a:hover {
-    color: var(--azul-oscuro);
+    color: var(--amarillo);
 }
 
 .social-links {
@@ -698,7 +744,9 @@ footer {
 .social-icon {
     width: 40px;
     height: 40px;
-    background-color: #333;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: var(--azulclaro);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -707,7 +755,7 @@ footer {
 }
 
 .social-icon:hover {
-    background-color: var(--azul-oscuro);
+    background-color: var(--amarillo);
 }
 
 .copyright {
@@ -716,6 +764,42 @@ footer {
     border-top: 1px solid #333;
     color: #aaa;
     font-size: 14px;
+}
+
+
+
+.hechos-reales{
+   margin-top: 12vh;
+
+  text-align: center;
+}
+#encabezado-hechos{
+    margin: 10vh;
+    padding-left: 15vw;
+    padding-right: 15vw;
+
+    
+}
+.container-hechos {      
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+    max-width: 100vw;
+    margin: auto;
+}
+.box {
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    min-height: 150px;
+}
+.box h3{
+    font-size: 1vw;
+}
+.number {
+    font-size: 5vw;
+    font-weight: bold;
+    color: #000c3f;
 }
 
 /* Responsive */
@@ -758,10 +842,14 @@ footer {
 @media (max-width: 576px) {
     .hero {
         height: 400px;
+        margin-top: 12vh;
+        height: 88vh;
     }
-    
+    .hero-content{
+max-width: 89vw;
+    }
     .hero-content h1 {
-        font-size: 28px;
+        font-size: 3vh;
     }
     
     .hero-content p {
@@ -771,5 +859,30 @@ footer {
     .section-title h2 {
         font-size: 26px;
     }
-}
+    #botones_acerca{
+        display: flex;
+        flex-direction: column;
+    }
+    #encabezado-hechos{
+        max-width: 100vw;
+        margin: 0;
+        margin-bottom: 10vh;
+    
+    }
+    .container-hechos{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(33vw, 1fr));
+        max-width: 100vw;
+        margin: auto;
+    }
+    .box h3{
+        font-size: 3vw;
+    }
+    .number {
+        font-size: 5vw;
+        font-weight: bold;
+        color: #000c3f;
+    }
+    
 
+}

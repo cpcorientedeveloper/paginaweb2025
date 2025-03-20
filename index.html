@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro de Productividad y Competitividad del Oriente</title>
-    <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
 
 </head>
 
@@ -18,7 +19,7 @@
     <header>
         <div class="container header-container">
             <a href="#" class="logo-container">
-                <img src="/img/logo_cpc.png" alt="CPC Oriente Logo" class="logo">
+                <img src="img/logo_cpc.png" alt="CPC Oriente Logo" class="logo">
             </a>
             <nav>
                 <ul class="nav-menu">
@@ -49,8 +50,29 @@
         </div>
     </header>
 
+    <!-- Contenedor para los iconos de redes sociales -->
+<!-- Contenedor para los iconos de redes sociales -->
+<div class="social-icons">
+    <a href="https://facebook.com" target="_blank" class="social-icon" title="Facebook">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <a href="https://facebook.com" target="_blank" class="social-icon" title="Facebook">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://instagram.com" target="_blank" class="social-icon" title="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://twitter.com" target="_blank" class="social-icon" title="Twitter">
+        <i class="fa-brands fa-youtube"></i>
+        </a>
+    <a href="https://linkedin.com" target="_blank" class="social-icon" title="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+</div>
+
+
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" style="background-image: url('img/portada.jpg');">
         <div class="container hero-content">
             <h1>Centro de Productividad y Competitividad del Oriente</h1>
             <p>Impulsamos el desarrollo empresarial y la competitividad regional a través de servicios especializados,
@@ -78,7 +100,7 @@
                                 <!-- Envolviendo todo el contenido con un enlace -->
                                 <a href="#" class="service-card-link">
                                     <div class="service-card">
-                                        <div class="service-img" style="background-image: url('/img/gestion.webp?height=200&width=300');"></div>
+                                        <div class="service-img" style="background-image: url('img/gestion.webp?height=200&width=300');"></div>
                                         <div class="service-content">
                                             <h3>Gestión de proyectos</h3>
                                             <p>---.</p>
@@ -91,7 +113,7 @@
                                 <!-- Envolviendo todo el contenido con un enlace -->
                                 <a href="#" class="service-card-link">
                                     <div class="service-card">
-                                        <div class="service-img" style="background-image: url('/img/transformacion.webp?height=200&width=300');"></div>
+                                        <div class="service-img" style="background-image: url('img/transformacion.webp?height=200&width=300');"></div>
                                         <div class="service-content">
                                             <h3>Transformación digital</h3>
                                             <p>----</p>
@@ -107,9 +129,10 @@
                     <div class="carousel-item">
                         <div class="row">
                             <div class="col-6">
+                                <a href="#" class="service-card-link">
                                 <div class="service-card">
                                     <div class="service-img"
-                                        style="background-image: url('/img/desarrollo.webp?height=200&width=300');">
+                                        style="background-image: url('img/desarrollo.webp?height=200&width=300');">
                                     </div>
                                     <div class="service-content">
                                         <h3>Desarrollo de capacidades</h3>
@@ -119,9 +142,10 @@
                                 </div>
                             </div>
                             <div class="col-6">
+                                <a href="#" class="service-card-link">
                                 <div class="service-card">
                                     <div class="service-img"
-                                        style="background-image: url('/img/innovacion.webp?height=200&width=300');">
+                                        style="background-image: url('img/innovacion.webp?height=200&width=300');">
                                     </div>
                                     <div class="service-content">
                                         <h3>Innovacion y productividad</h3>
@@ -148,12 +172,7 @@
                 </button>
             </div>
         </div>
-        <div id="botones_acerca">
-            <a href="#servicios" class="btn">Conoce más</a>
-            <a href="#contacto" class="btn">Contáctanos</a>
-            <a href="#contacto" class="btn">Experiencias</a>
-
-        </div>
+      
     </section>
 
 
@@ -230,9 +249,19 @@
                
             </div>
 
- <div id="experiencia">  
+            <div id="botones_acerca">
+                <a href="#servicios" class="btn">Conoce más</a>
+                <a href="#contacto" class="btn">Contáctanos</a>
+                <a href="#contacto" class="btn">Experiencias</a>
+    
+            </div>
+<section id="hechos" class="hechos-reales">
+    <div id="encabezado-hechos">
             <h1>Algunos de los <span style="color: #008cd0;">hechos reales</span> de nuestra empresa</h1>
-            <div class="container">
+            <p>Como grupo de investigación reconocido por Minciencias desde el año 2010.
+                Gestión Tecnológica, </p>
+        </div>
+            <div class="container-hechos">
                 <div class="box">
                     <h3>Acompañamientos en formulación</h3>
                     <div class="number" data-target="1800">0</div>
@@ -257,117 +286,16 @@
                     <h3>Acompañamiento en productividad e innovación</h3>
                     <div class="number" data-target="280">0</div>
                 </div>
-            </div>
-        </div>
-    <!-- Sobre Nosotros -->
-    <section id="nosotros" class="about">
-        <div class="container about-container">
-            <div class="about-img" style="background-image: url('/placeholder.svg?height=400&width=500');"></div>
-            <div class="about-content">
-                <h2>Sobre CPC Oriente</h2>
-                <p>Somos una organización dedicada a impulsar la productividad y competitividad de las empresas de la
-                    región oriental del país. Con más de 15 años de experiencia, hemos contribuido al desarrollo
-                    económico y social de nuestra región.</p>
-                <p>Nuestro equipo está conformado por profesionales altamente calificados en diferentes áreas del
-                    conocimiento, comprometidos con la excelencia y el desarrollo empresarial.</p>
-                <a href="#" class="btn">Conoce más</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Proyectos -->
-    <section id="proyectos" class="projects">
-        <div class="container">
-            <div class="section-title">
-                <h2>Proyectos Destacados</h2>
-                <p>Conoce algunos de nuestros proyectos más relevantes que han impactado positivamente en la región.</p>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-img" style="background-image: url('/placeholder.svg?height=200&width=300');">
-                    </div>
-                    <div class="project-content">
-                        <h3>Fortalecimiento del Sector Agroindustrial</h3>
-                        <p>Proyecto de mejora de la competitividad de las empresas agroindustriales de la región a
-                            través de la implementación de tecnologías innovadoras.</p>
-                        <a href="#" class="btn">Ver proyecto</a>
-                    </div>
+                <div class="box">
+                    <h3>Formulación y supervisión de inversiones I+D+I</h3>
+                    <div class="number" data-target="56">0</div>
                 </div>
-                <div class="project-card">
-                    <div class="project-img" style="background-image: url('/placeholder.svg?height=200&width=300');">
-                    </div>
-                    <div class="project-content">
-                        <h3>Desarrollo de Clúster Tecnológico</h3>
-                        <p>Iniciativa para la creación y fortalecimiento de un clúster tecnológico regional que impulse
-                            la innovación y el desarrollo empresarial.</p>
-                        <a href="#" class="btn">Ver proyecto</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-img" style="background-image: url('/placeholder.svg?height=200&width=300');">
-                    </div>
-                    <div class="project-content">
-                        <h3>Programa de Internacionalización</h3>
-                        <p>Acompañamiento a empresas locales en su proceso de internacionalización para acceder a nuevos
-                            mercados y oportunidades de negocio.</p>
-                        <a href="#" class="btn">Ver proyecto</a>
-                    </div>
+                <div class="box">
+                    <h3>Asesoramiento de Empresas</h3>
+                    <div class="number" data-target="40">0</div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Testimonios -->
-    <section id="testimonios" class="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>Testimonios</h2>
-                <p>Lo que nuestros clientes dicen sobre nuestros servicios</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Gracias al apoyo del CPC Oriente, nuestra empresa logró optimizar sus
-                        procesos productivos y aumentar significativamente su competitividad en el mercado."</p>
-                    <div class="testimonial-author">
-                        <div class="author-img" style="background-image: url('/placeholder.svg?height=50&width=50');">
-                        </div>
-                        <div class="author-info">
-                            <h4>Carlos Rodríguez</h4>
-                            <p>Gerente General, Industrias XYZ</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Los programas de formación especializada nos permitieron desarrollar
-                        nuevas habilidades en nuestro equipo, lo que se ha traducido en mejores resultados para nuestra
-                        empresa."</p>
-                    <div class="testimonial-author">
-                        <div class="author-img" style="background-image: url('/placeholder.svg?height=50&width=50');">
-                        </div>
-                        <div class="author-info">
-                            <h4>María González</h4>
-                            <p>Directora de RRHH, Empresa ABC</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"El proyecto de innovación desarrollado con el CPC Oriente nos permitió
-                        implementar nuevas tecnologías que han revolucionado nuestra forma de trabajar."</p>
-                    <div class="testimonial-author">
-                        <div class="author-img" style="background-image: url('/placeholder.svg?height=50&width=50');">
-                        </div>
-                        <div class="author-info">
-                            <h4>Juan Pérez</h4>
-                            <p>Director de Innovación, Grupo DEF</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
+        </section>
     <!-- Contacto -->
     <section id="contacto" class="contact">
         <div class="container">
@@ -383,28 +311,28 @@
                             <div class="contact-icon">📍</div>
                             <div class="contact-text">
                                 <h4>Dirección</h4>
-                                <p>Av. Principal #123, Col. Centro, Ciudad</p>
+                                <p>Sede UIS - Bucarica, Cra.19, 35-02, Bucaramanga, Santander</p>
                             </div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-icon">📞</div>
                             <div class="contact-text">
                                 <h4>Teléfono</h4>
-                                <p>+57 123 456 7890</p>
+                                <p>+57 315 494 0296</p>
                             </div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-icon">✉️</div>
                             <div class="contact-text">
                                 <h4>Email</h4>
-                                <p>contacto@cpcoriente.org</p>
+                                <p>info@cpcoriente.org</p>
                             </div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-icon">🕒</div>
                             <div class="contact-text">
                                 <h4>Horario</h4>
-                                <p>Lunes a Viernes: 8:00 AM - 6:00 PM</p>
+                                <p>Lunes a Viernes: 8:00 AM - 5:00 PM</p>
                             </div>
                         </div>
                     </div>
@@ -431,31 +359,31 @@
                     <p>Centro de Productividad y Competitividad del Oriente, comprometidos con el desarrollo empresarial
                         y la competitividad regional.</p>
                     <div class="social-links">
-                        <a href="#" class="social-icon">FB</a>
-                        <a href="#" class="social-icon">IG</a>
-                        <a href="#" class="social-icon">TW</a>
-                        <a href="#" class="social-icon">LI</a>
+                        <a href="https://facebook.com" target="_blank" class="social-icon" title="Facebook">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" class="social-icon" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="social-icon" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="social-icon" title="Twitter">
+                            <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        <a href="https://linkedin.com" target="_blank" class="social-icon" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="footer-col">
-                    <h3>Enlaces rápidos</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#servicios">Servicios</a></li>
-                        <li><a href="#nosotros">Nosotros</a></li>
-                        <li><a href="#proyectos">Proyectos</a></li>
-                        <li><a href="#aliados">Aliados</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
-                    </ul>
-                </div>
+            
                 <div class="footer-col">
                     <h3>Servicios</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Consultoría Empresarial</a></li>
-                        <li><a href="#">Formación Especializada</a></li>
-                        <li><a href="#">Innovación y Desarrollo</a></li>
-                        <li><a href="#">Internacionalización</a></li>
-                        <li><a href="#">Gestión de Proyectos</a></li>
+                        <li><a href="#">Gestion de proyectos</a></li>
+                        <li><a href="#">Transformacion digital</a></li>
+                        <li><a href="#">Desarrollo de capacidades</a></li>
+                        <li><a href="#">Innovacion y productividad</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -473,7 +401,51 @@
             </div>
         </div>
     </footer>
-    
+    <script>
+   function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+function isElementOutOfViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return rect.bottom < 0 || rect.top > window.innerHeight;
+}
+
+function animateCounters() {
+    const counters = document.querySelectorAll(".number");
+    counters.forEach(counter => {
+        if (isElementInViewport(counter) && !counter.dataset.animated) {
+            counter.dataset.animated = "true";
+            const target = +counter.getAttribute("data-target");
+            let count = 0;
+            const increment = target / 100;
+            
+            const updateCounter = () => {
+                count += increment;
+                if (count < target) {
+                    counter.innerText = Math.floor(count);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            updateCounter();
+        } else if (isElementOutOfViewport(counter)) {
+            counter.dataset.animated = "";
+            counter.innerText = "0"; // Reiniciar a 0 cuando salga de la vista
+        }
+    });
+}
+
+document.addEventListener("scroll", animateCounters);
+
+    </script>
 </body>
 
 </html>
