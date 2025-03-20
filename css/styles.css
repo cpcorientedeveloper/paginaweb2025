@@ -286,7 +286,7 @@ header {
 /* Servicios */
 
 .services {
-    padding: 15vh 0;
+    padding-top: 15vh;
     background-color: #f9f9f9;
 }
 
@@ -301,7 +301,9 @@ header {
     color: #000;
     margin-bottom: 15px;
 }
-
+#clientes{
+    padding-top: 15vh;
+}
 .section-title p {
     font-size: 18px;
     color: #666;
@@ -322,7 +324,7 @@ header {
 }
 
 .service-img {
-    height: 30vh;
+    height: 40vh;
     background-color: #ddd;
     background-size: cover;
     background-position: center;
@@ -383,7 +385,9 @@ width: 10px;
 }
 
 #botones_acerca{
-    margin-top: 4vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+
 display: flex;
     flex-direction: row;
     justify-content: center;
@@ -591,6 +595,7 @@ display: flex;
     background-color: #f9f9f9;
     display: flex;
     justify-content: center;
+
     
 }
 
@@ -624,13 +629,16 @@ display: flex;
 
 /* Contacto */
 .contact {
-    padding: 80px 0;
+    padding: 12vh 0;
 }
 
 .contact-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 50px;
+    margin-left: 25vw;
+    margin-right: 25vw;
+
 }
 
 .contact-info h3 {
@@ -780,8 +788,15 @@ footer {
 }
 #encabezado-hechos{
     margin: 10vh;
+    margin-top: 15vh;
     padding-left: 15vw;
     padding-right: 15vw;
+
+    
+}
+#encabezado-hechos p{
+    margin-top: 5vh;
+
 
     
 }
@@ -901,6 +916,9 @@ max-width: 89vw;
 #informacion-footer {
     margin-left: 15vw;
     margin-right: 15vw;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
     gap: 20px;
