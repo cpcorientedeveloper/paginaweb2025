@@ -757,7 +757,7 @@ footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 3px;
     justify-content: center
 }
 
@@ -950,15 +950,15 @@ max-width: 89vw;
 }
 
 #informacion-footer {
-    margin-left: 15vw;
-    margin-right: 15vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
     margin-bottom: 5vh;
     margin-top: 5vh;
 
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
     gap: 20px;
-    align-items: center;
+    align-items: start;
     justify-items: center;
 }
 

@@ -315,11 +315,11 @@
     <section id="contacto" class="contact">
         <div class="container">
             <div class="section-title">
-                <h2>Contacto</h2>
+                <h2>Contactanos</h2>
                 <p>Estamos aquí para ayudarte. Contáctanos para más información sobre nuestros servicios.</p>
             </div>
             <div class="contact-container">
-                
+
                 <div class="contact-form">
                     <form>
                         <input type="text" placeholder="Nombre completo" required>
@@ -341,7 +341,7 @@
             <div class="datosf">
                 <div id="contenidodatosdireccion">
                     <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
-                    <div class="contact-text">                    
+                    <div class="contact-text">
                         <p>Sede UIS - Bucarica, </p>
                         <p>Cra.19, 35-02, Bucaramanga,</p>
                         <p>Santander</p>
@@ -358,37 +358,40 @@
                 <div class="contenidodatos">
                     <div class="contact-icon"><i class="fa-regular fa-envelope"></i></div>
                     <div class="contact-text">
-                        <p>info@cpcoriente.org</p>         
-                        </div>
+                        <p>info@cpcoriente.org</p>
+                    </div>
                 </div>
             </div>
             <div class="datosf">
+                <div id="contenidodatosdireccion">
+                    <div class="contact-icon"><i class="fa-solid fa-book"></i></div>
+                    <div class="contact-text">
+                        <p><a href="/politicas-de-tratamiento-de-datos" class="link">Políticas de tratamiento de
+                                datos</a>
+                    </div>
+                </div>
+            </div>
 
-                
-                <div class="contact-text">
-                <p><a href="/politicas-de-tratamiento-de-datos" class="link">Políticas de tratamiento de datos</a>
-                </p>
-            </div>
+       
+        <div class="social-links">
+            <a href="https://wa.me/573154940296?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n." target="_blank"
+                class="social-icon" title="Whatsapp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="https://www.facebook.com/cpcorienteco" target="_blank" class="social-icon" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/cpcorienteco" target="_blank" class="social-icon" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@cpcorienteco" target="_blank" class="social-icon" title="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/cpc-oriente/" target="_blank" class="social-icon"
+                title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
         </div>
-            <div class="social-links">
-                <a href="https://wa.me/573154940296?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n." target="_blank"
-                    class="social-icon" title="Whatsapp">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
-                <a href="https://www.facebook.com/cpcorienteco" target="_blank" class="social-icon" title="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://www.instagram.com/cpcorienteco" target="_blank" class="social-icon" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.youtube.com/@cpcorienteco" target="_blank" class="social-icon" title="YouTube">
-                    <i class="fa-brands fa-youtube"></i>
-                </a>
-                <a href="https://www.linkedin.com/company/cpc-oriente/" target="_blank" class="social-icon"
-                    title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-            </div>
         </div>
         <div class="copyright">
             <p>&copy; 2025 Centro de Productividad y Competitividad del Oriente. Todos los derechos reservados.</p>
@@ -396,7 +399,7 @@
     </footer>
     <script>
 
-        
+
         function isElementInViewport(el) {
             const rect = el.getBoundingClientRect();
             return (
@@ -447,13 +450,13 @@
         // Seleccionamos el botón de la hamburguesa y el menú
         const menuButton = document.querySelector('.mobile-menu-btn');
         const navMenu = document.querySelector('.nav-menu');
-    
+
         // Función para abrir y cerrar el menú
         menuButton.addEventListener('click', () => {
             navMenu.classList.toggle('active');
             menuButton.classList.toggle('opened'); // Cambia el icono de la hamburguesa
         });
-    
+
         // Cerrar el menú al hacer clic fuera de él
         window.addEventListener('click', (e) => {
             if (!navMenu.contains(e.target) && !menuButton.contains(e.target)) {
@@ -462,7 +465,7 @@
             }
         });
     </script>
-    
+
 </body>
 
 </html>
