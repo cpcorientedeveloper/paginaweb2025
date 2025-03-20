@@ -46,7 +46,8 @@
                     <li><a href="#aliados">Aplicativos</a></li>
                     <li><a href="#contacto"></a></li>
                 </ul>
-                <div class="mobile-menu-btn">☰</div>
+                <div class="mobile-menu-btn" id="mobile-menu-btn">
+                    ☰</div>
             </nav>
         </div>
     </header>
@@ -325,7 +326,7 @@
                         <input type="email" placeholder="Correo electrónico" required>
                         <input type="tel" placeholder="Teléfono">
                         <textarea placeholder="Mensaje" required></textarea>
-                        <button type="submit" class="btn">Enviar mensaje</button>
+                        <button type="submit" class="btn" id="btn-form">Enviar mensaje</button>
                     </form>
                 </div>
             </div>
@@ -394,6 +395,8 @@
         </div>
     </footer>
     <script>
+
+        
         function isElementInViewport(el) {
             const rect = el.getBoundingClientRect();
             return (
@@ -437,7 +440,29 @@
 
         document.addEventListener("scroll", animateCounters);
 
+
+
     </script>
+    <script>
+        // Seleccionamos el botón de la hamburguesa y el menú
+        const menuButton = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+    
+        // Función para abrir y cerrar el menú
+        menuButton.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            menuButton.classList.toggle('opened'); // Cambia el icono de la hamburguesa
+        });
+    
+        // Cerrar el menú al hacer clic fuera de él
+        window.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !menuButton.contains(e.target)) {
+                navMenu.classList.remove('active');
+                menuButton.classList.remove('opened');
+            }
+        });
+    </script>
+    
 </body>
 
 </html>
