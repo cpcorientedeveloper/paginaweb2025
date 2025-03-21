@@ -154,8 +154,9 @@ header {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     min-width: 300px;
+    align-items: start;
     z-index: 999;
-    margin-left: -0px; /* Alineación horizontal opcional */
+    margin-left: 0px; /* Alineación horizontal opcional */
 }
 
 /* Mostrar submenú cuando el mouse pase por encima del item principal */
@@ -180,7 +181,7 @@ header {
     text-decoration: none;
     display: flex;  /* Hace que el enlace ocupe todo el área del li */
     padding: 10px;  /* Ajuste para hacer el enlace más grande y "despegado" */
-    text-align: center;
+    text-align: lef;
     transition: background-color 0.3s;
 }
 
