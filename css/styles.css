@@ -740,7 +740,7 @@ display: flex;
 
 /* Footer */
 footer {
-    background: #666; /* Degradado de morado a azul */
+    background: linear-gradient(to right, #666, #9c9494);
     color: white;
     padding: 60px 0 20px;
     
