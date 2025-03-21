@@ -232,12 +232,49 @@ header {
 .social-icons a:hover {
     background-color: var(--amarillo); /* Cambio de color en hover */
 }
+.social-icons-mobil {
+    position: fixed; /* Fijar la posición en la pantalla */
+    top: 80%; /* Centrado verticalmente */
+    right: 0; /* Alineado al borde derecho */
+    margin-right: 2vh;
+    transform: translateY(0%); /* Centrado perfecto en el eje Y */
+    z-index: 9999; /* Asegura que los iconos estén encima de otros elementos */
+    display: none; /* Los iconos no se muestran por defecto */
+}
+
+/* Estilos para cada ícono */
+.social-icons-mobil a {
+    display: flex; /* Usamos flexbox para centrar el contenido */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    margin-bottom: 10px;
+    text-decoration: none;  /* Elimina el subrayado por defecto */
+
+    width: 8vh;  /* Tamaño fijo para el contenedor del ícono */
+    height: 8vh; /* Tamaño fijo para el contenedor del ícono */
+    background-color: var(--azulclaro); /* Fondo para los íconos */
+    border-radius: 50%; /* Hacer el contenedor circular */
+    color: white;
+    font-size: 5vh; /* Tamaño del ícono, se ajusta al tamaño de la ventana */
+    transition: background-color 0.3s ease; /* Efecto de hover */
+}
+
+.social-icons-mobil a:hover {
+    background-color: var(--amarillo); /* Cambio de color en hover */
+}
 
 /* Mostrar los iconos solo en pantallas grandes (desktop) */
 @media (min-width: 1024px) {
     .social-icons {
         display: block; /* Muestra los iconos solo en pantallas grandes */
     }
+   
+}
+@media (max-width: 1024px) {
+    .social-icons-mobil {
+        display: block; /* Muestra los iconos solo en pantallas grandes */
+    }
+   
 }
 /* Hero Section */
 .hero {
